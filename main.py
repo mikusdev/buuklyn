@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from numpy import DataSource
-from scripts import email_client
+from scripts import c_mail
 import time
 
 app = Flask("app")
@@ -11,7 +11,7 @@ def index():
 
 @app.route('/booking', methods=['GET'])
 def booking():
-    email_client.email("switch.mc.astro@gmail.com","test")
+    c_mail.email("switch.mc.astro@gmail.com","test")
 
 @app.route('/api', methods=['POST'])
 def api():
