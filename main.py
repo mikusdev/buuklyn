@@ -1,6 +1,6 @@
 from flask import Flask, request, jsonify, render_template
 from numpy import DataSource
-from scripts import c_mail
+from scripts import c_email
 import time
 
 app = Flask("app")
